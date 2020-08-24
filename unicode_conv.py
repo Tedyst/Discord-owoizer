@@ -23,5 +23,5 @@ def converted(message):
                                              letter)
         else:
             translated += letter
-        translated += " "
+        translated += u"\u2063"
     return translated
