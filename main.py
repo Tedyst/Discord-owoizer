@@ -22,6 +22,19 @@ class OwOizer(discord.Client):
             await response.add_reaction('🅾')
             await response.add_reaction('🇼')
             await response.add_reaction('🇴')
+            herbert = client.get_emoji(743013337033343056)
+            await response.add_reaction(herbert)
+        elif message.content.startswith('miniowo '):
+            nonowoed = message.content[8:]
+            print('%s said %s, converting!' %
+                  (message.author, message.content))
+            owoed = owo.owo(nonowoed)
+            response = await message.channel.send(owoed)
+            await response.add_reaction('🅾')
+            await response.add_reaction('🇼')
+            await response.add_reaction('🇴')
+            herbert = client.get_emoji(743013337033343056)
+            await response.add_reaction(herbert)
 
 
 client = OwOizer()
