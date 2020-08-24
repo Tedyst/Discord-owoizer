@@ -1,6 +1,10 @@
 import discord
 import owo
 import unicode_conv
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 class OwOizer(discord.Client):
@@ -21,4 +25,4 @@ class OwOizer(discord.Client):
 
 
 client = OwOizer()
-client.run('NzQ3NDUzNDAyMzk2NDkxODU3.X0PGOg.7nLzFpy_OlGvUurLc6pP0Ju7IaA')
+client.run(os.getenv('TOKEN'))
